@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Грибов Сергей ИС-25">
+    <meta name="keywords" content="заказ одежды, купить одежду, форма заказа, G.O.A.T. STORE">
+    <meta name="description" content="Оформление заказа в магазине стильной одежды G.O.A.T. STORE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа – G.O.A.T. STORE</title>
+
+    <link rel="stylesheet" href="style_f/structuref.css">
+    <link rel="stylesheet" href="style_f/typographyf.css">
+    <link rel="stylesheet" href="style_f/images.css">
+    <link rel="stylesheet" href="style_f/menuf.css">
+
+    <style>
+        .sidebar {
+            display: none;
+        }
+        .right-page {
+            float: none;
+            width: 100%;
+            margin: 0 auto;
+        }
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .form-row {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .form-row label {
+            width: 180px;
+            font-weight: 500;
+            color: #d9c5a7;
+        }
+        .form-row input, 
+        .form-row select, 
+        .form-row textarea {
+            flex: 1;
+            background-color: #2c2c2c;
+            border: 1px solid #c49a6c;
+            padding: 8px 10px;
+            color: #f0f0f0;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+        .form-row input:focus, 
+        .form-row select:focus, 
+        .form-row textarea:focus {
+            outline: none;
+            border-color: #e0b07f;
+            box-shadow: 0 0 5px rgba(196,154,108,0.5);
+        }
+        fieldset {
+            border: 1px solid #c49a6c;
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 1.2rem;
+        }
+        legend {
+            color: #c49a6c;
+            font-weight: bold;
+            padding: 0 0.5rem;
+        }
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+        .radio-group label {
+            width: auto;
+            font-weight: normal;
+        }
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        button {
+            cursor: pointer;
+            padding: 8px 24px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .form-row label {
+                width: auto;
+            }
+            .radio-group {
+                justify-content: center;
+            }
+            .form-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.8rem;
+            }
+            form {
+                padding: 1rem;
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main-page">
+    <div class="right-page">
+        <header class="site-header">
+            <div class="header-text">
+                <h1>G.O.A.T. STORE</h1>
+                <p>Оформление заказа</p>
+            </div>
+        </header>
+
+        <div class="mobile-menu-container">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="top-menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="order.html">Заказ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="site-main">
+            <form action="#" method="post">
+                <div class="form-row">
+                    <label for="fio">ФИО *:</label>
+                    <input type="text" id="fio" name="fio" placeholder="Иванов Иван Иванович" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">E-mail *:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                </div>
+                <div class="form-row">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+                </div>
+                <div class="form-row">
+                    <label for="product">Категория товара:</label>
+                    <select id="product" name="product">
+                        <option value="Футболка">Футболка</option>
+                        <option value="Джинсы">Джинсы</option>
+                        <option value="Платье">Платье</option>
+                        <option value="Куртка">Куртка</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Выберите размер</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="size" value="XS"> XS</label>
+                        <label><input type="radio" name="size" value="S"> S</label>
+                        <label><input type="radio" name="size" value="M" checked> M</label>
+                        <label><input type="radio" name="size" value="L"> L</label>
+                        <label><input type="radio" name="size" value="XL"> XL</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-row">
+                    <label for="quantity">Количество:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                </div>
+                <div class="form-row">
+                    <label for="delivery">Дата доставки:</label>
+                    <input type="date" id="delivery" name="delivery" value="2025-09-10">
+                </div>
+                <div class="form-row">
+                    <label for="comment">Комментарий к заказу:</label>
+                    <textarea id="comment" name="comment" rows="3" placeholder="Особые пожелания..."></textarea>
+                </div>
+                <div class="form-row">
+                    <label style="width: auto;">
+                        <input type="checkbox" name="consent" required> Я согласен на обработку персональных данных
+                    </label>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Отправить заказ</button>
+                    <button type="reset">Очистить форму</button>
+                </div>
+            </form>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2025 — G.O.A.T. STORE. Все права защищены.</p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

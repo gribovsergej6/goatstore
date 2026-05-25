@@ -1,0 +1,52 @@
+body {
+    background-color: #000000;
+}
+
+.main-page {
+    background-color: #242424;
+}
+
+.sidebar {
+    background-color: #181818;
+    border-right: 0.2rem solid #101010;
+}
+
+.site-header {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-menu {
+    background: linear-gradient(#f5f5f5, #cfcfcf);
+    border-bottom: 0.2rem solid #78a500;
+}
+
+.site-main {
+    background-color: #252525;
+}
+
+.side-box h3 {
+    background: linear-gradient(#b9db00, #82a900);
+}
+
+.side-box p,
+.side-box ul {
+    background-color: #202020;
+    border-bottom: 0.05rem solid #333333;
+}
+
+.search-block input {
+    background-color: #ffffff;
+    border: 0.05rem solid #aaaaaa;
+}
+
+button {
+    background: linear-gradient(#b9db00, #82a900);
+    border: 0.05rem solid #567000;
+}
+
+.site-footer {
+    background-color: #c9cac5;
+}

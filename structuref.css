@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.main-page {
+    width: 86%;
+    max-width: 75rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    float: left;
+    width: 20%;
+    min-height: 42rem;
+    padding: 1rem;
+}
+
+.right-page {
+    float: right;
+    width: 80%;
+}
+
+.site-header {
+    width: 100%;
+    min-height: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    text-align: center;
+}
+
+/* ===== МОБИЛЬНОЕ МЕНЮ (бургер, CSS-only) ===== */
+.mobile-menu-container {
+    position: relative;
+    width: 100%;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin: 10px 15px;
+    z-index: 20;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #c49a6c;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.top-menu {
+    width: 100%;
+    min-height: 2.2rem;
+}
+
+.top-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu li {
+    display: inline-block;
+}
+
+.site-main {
+    width: 100%;
+    min-height: 22rem;
+    padding: 1.2rem;
+}
+
+.content {
+    width: 100%;
+}
+
+.post-header,
+.post-body,
+.post-footer {
+    width: 100%;
+}
+
+.search-block,
+.side-box {
+    width: 100%;
+    margin-bottom: 0.8rem;
+}
+
+.search-block input {
+    width: 100%;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.search-block button {
+    display: block;
+}
+
+.side-box {
+    padding-bottom: 0.4rem;
+}
+
+.side-box h3 {
+    width: 100%;
+    padding: 0.35rem;
+}
+
+.side-box p,
+.side-box ul {
+    margin: 0;
+    padding: 0.5rem 0.4rem;
+}
+
+.side-box ul {
+    list-style: none;
+}
+
+.site-footer {
+    clear: both;
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 1rem;
+}
+
+/* ===== АДАПТАЦИЯ (планшеты и мобильные) ===== */
+@media (max-width: 800px) {
+    .main-page {
+        width: 96%;
+    }
+
+    .sidebar,
+    .right-page {
+        float: none;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar {
+        order: 2;  /* Боковая панель после контента */
+    }
+
+    .right-page {
+        order: 1;
+    }
+
+    /* Показываем иконку бургера */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Скрываем меню по умолчанию */
+    .top-menu {
+        display: none;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+        border-bottom: 2px solid #c49a6c;
+        z-index: 10;
+    }
+
+    .top-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-menu li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .top-menu a {
+        display: block;
+        padding: 12px;
+    }
+
+    /* При активации чекбокса показываем меню */
+    .menu-checkbox:checked ~ .top-menu {
+        display: block;
+    }
+
+    /* Анимация бургера в крестик */
+    .menu-checkbox:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-checkbox:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-checkbox:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) ===== */
+@media (max-width: 480px) {
+    .main-page {
+        width: 98%;
+    }
+
+    .sidebar {
+        padding: 0.5rem;
+    }
+
+    .side-box h3 {
+        font-size: 0.95rem;
+    }
+
+    .site-header {
+        min-height: 10rem;
+    }
+
+    .header-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .site-main {
+        padding: 0.8rem;
+    }
+
+    .search-block input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* Увеличиваем область клика на ссылках для пальцев */
+    .top-menu a,
+    .side-box a,
+    .post-footer a {
+        padding: 8px 0;
+        display: inline-block;
+    }
+}

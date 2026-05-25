@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.header-text h1 {
+    color: #fff6e5;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-text p {
+    color: #f2d8b3;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    font-style: italic;
+}
+
+.search-block label {
+    color: #d4c5b5;
+    font-weight: 500;
+}
+
+.side-box h3 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.side-box p,
+.side-box li {
+    color: #c0c0c0;
+    font-size: 0.9rem;
+}
+
+.content h2 {
+    color: #fff2e0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.3px;
+}
+
+.post-meta {
+    color: #d9a13b;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+}
+
+.post-body p {
+    color: #ececec;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.post-footer p {
+    color: #d9a13b;
+    font-size: 0.9rem;
+}
+
+.site-footer {
+    color: #a0a0a0;
+    font-size: 0.8rem;
+}
